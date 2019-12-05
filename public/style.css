@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.mainPage{
+    display: grid;
+    grid-template-columns: 1fr [gifs] 35% [gife forms] 35% [forme] 1fr;
+    grid-template-rows: 1fr [areas] 70% [areae] 1fr;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.leftSide img{
+    width: 100%;
+    height: 80%;
+    border-radius: 25px;
+}
+.rightSide{
+    grid-row: areas/areae;
+    grid-column: forms/forme;
+}
+
+.leftSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: areas/areae;
+    grid-column: gifs/gife;
+}
+
+.loginCard{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.loginCard img{
+    width: 200px;
+    height: 200px;
+    margin-left: 170px;
+    border: 2px solid #4d4d4d;
+    border-radius: 50%;
+    animation: mymove 3s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes mymove {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.buttonsMain{
+    width: 100%;
+    height: 20%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBtn{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-right: 1px solid silver;
+    transition: 0.2s all;
+}
+
+.registerBtn{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.2 all;
+}
+
+.loginBtn:hover, .registerBtn:hover{
+    color: white;
+    cursor: pointer;
+    background: #eb2d36;
+}
+
+.loginCard button, .registerCard button{
+    margin-top: 20px;
+}
+
+.registerCard{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menuSign{
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 1800px;
+    margin-top: 30px;
+    background: url('./menu.png');
+    background-size: cover;
+    background-repeat: none;
+    opacity: 0.2;
+    transition: 0.2s all;
+}
+
+.menuSign:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sidebar{
+    width: 250px;
+}
+
+.sidebar .profile{
+    width: 100%;
+    height: auto;
+}
+
+.sidebar .profile .profileImage{
+    width: 100%;
+    height: auto;
+}
+
+.sidebar .profile .profileImage img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid silver;
+    border-radius: 50%;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.sidebar .profile .teacher{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.sidebar .profile .name{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sidebar hr{
+    width: 80%;
+    margin: 0 auto;
+    margin: 20px;
+}
+
+.sidebar .sideBarMenu{
+    width: 100%;
+    height: auto;
+}
+
+.sidebar .sideBarMenu .sideElement{
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    transition: 0.2s all;
+}
+
+.sidebar .sideBarMenu .sideElement:hover{
+    color: silver;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sidebar .logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 350px
+}
+
+.sidebar .logo img{
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 1s ease-in-out;
+}
+
+.sidebar .logo img:hover{
+    transform: rotate(360deg);
+}
+
+.sidebar .footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.charts{
+    width: 500px;
+    height: 500px;
+    float: left;
+    margin: 100px;
+}
+
+.classes{
+    width: 250px;
+    height: 150px;
+    margin: 50px;
+    background: cornflowerblue;
+    color: white;
+    border-radius: 5px;
+    float: left;
+}
+
+.classes .class-name{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.classes .studentNumber{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fillForm{
+    margin: 20px;
+    position: fixed;
+    z-index: 2;
+}
+
+
