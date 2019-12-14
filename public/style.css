@@ -129,14 +129,14 @@
     height: 100vh;
     background: gray;
     opacity: 0.3;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sidebar{
-    width: 250px;
-    height: 100%;
-    display: block;
+    display: absolute;
     position: fixed;
+    width: 250px;
+    height: 100vh;
     background: white;
     transition: 0.2s;
     z-index: 2;
@@ -266,11 +266,11 @@
 }
 
 #buttonComponent{
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 0;
+    z-index: 1;
     width: 50px;
     height: 50px;
     border: 1px solid silver;
@@ -283,11 +283,33 @@
 #buttonComponent img{
     width: 30px;
     height: 30px;
-    cursor: pointer;
 }
 
 #buttonComponent:hover{
-    opacity: 0.6;
+    opacity: 0.9;
+    cursor: pointer;
 }
+
+.dashboard{ 
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+.classList{
+    display: flex;
+    position: relative;
+    width: 95%;
+    height: 500px;
+    margin-top: 20px;
+    margin-left: 2.5%;
+    border-radius: 5px;
+    z-index: 0;
+    background: #ededed;
+    box-shadow: 2px 3px 5px 0px;
+}
+
 
 

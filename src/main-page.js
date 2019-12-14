@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Header from './components/sidebar/header';
 import MenuIcon from './image/menu.png';
 import Button from './components/tags/button';
+import Classrooms from './components/dashboard/classrooms';
 
 export default class MainPage extends Component {
     constructor(props){
@@ -20,7 +21,7 @@ export default class MainPage extends Component {
 
     render() {
         return (
-            <Fragment>
+            <div className='dashboard'>
                 <Header isopen={ this.handleSidebar } open={this.state.sidebarIsOpen} />
                 <Button 
                     class={ 'openMenu' }
@@ -28,7 +29,12 @@ export default class MainPage extends Component {
                     isopen={ this.handleSidebar }
                     text={ 'open_the_menu' }
                 />
-            </Fragment>
+                <Classrooms />
+                <Classrooms />
+                <Classrooms />
+                <Classrooms />
+                <Classrooms />
+            </div>
         )
     }
 }
