@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Header from './components/sidebar/header';
 import MenuIcon from './image/menu.png';
 import Button from './components/tags/button';
-import Classrooms from './components/dashboard/classrooms';
-
+import Class from './components/dashboard/classroom/class';
+import ListArea from './components/module/dashboard-list';
 export default class MainPage extends Component {
     constructor(props){
         super(props);
@@ -18,9 +18,11 @@ export default class MainPage extends Component {
         this.setState({
             sidebarIsOpen: status
         });
-
     }
 
+    classroomList() {
+        return this.state.classrooms.map(classroom => <Class name={ classroom.class } number={ classroom.number } />)
+    }
     render() {
         return (
             <div className='dashboard'>
@@ -31,7 +33,7 @@ export default class MainPage extends Component {
                     isopen={ this.handleSidebar }
                     text={ 'open_the_menu' }
                 />
-                <Classrooms classrooms={ this.state.classrooms } />
+                <ListArea classname={ 'classList' }  renderList={ this.classroomList() }/>
             </div>
         )
     }
