@@ -8,7 +8,8 @@ export default class MainPage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            sidebarIsOpen: false
+            sidebarIsOpen: false,
+            classrooms: [{class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}]
         };
         this.handleSidebar = this.handleSidebar.bind(this);
     }
@@ -17,6 +18,7 @@ export default class MainPage extends Component {
         this.setState({
             sidebarIsOpen: status
         });
+
     }
 
     render() {
@@ -29,11 +31,7 @@ export default class MainPage extends Component {
                     isopen={ this.handleSidebar }
                     text={ 'open_the_menu' }
                 />
-                <Classrooms />
-                <Classrooms />
-                <Classrooms />
-                <Classrooms />
-                <Classrooms />
+                <Classrooms classrooms={ this.state.classrooms } />
             </div>
         )
     }
