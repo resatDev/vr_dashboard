@@ -129,7 +129,10 @@
     height: 100vh;
     background: gray;
     opacity: 0.3;
+<<<<<<< HEAD
     z-index: 1;
+=======
+>>>>>>> 5b23c628896238faf5271c8c3eac3532815ce626
 }
 
 .sidebar{
@@ -138,8 +141,11 @@
     display: block;
     position: fixed;
     background: white;
+<<<<<<< HEAD
     transition: 0.2s;
     z-index: 2;
+=======
+>>>>>>> 5b23c628896238faf5271c8c3eac3532815ce626
 }
 
 .sidebar .profile{
