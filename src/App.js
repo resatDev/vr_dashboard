@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Authentication from './authentication';
 // import Header from './components/sidebar/header';
 import MainPage from './main-page';
+import ClassroomContainer from './classroomContainer';
 // import Class from './class';
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       </Route>
       <Route path='/main-page'>
         <MainPage />
+      </Route>
+      <Route path='/classroom'>
+        <ClassroomContainer />
       </Route>
     </Router>
   );

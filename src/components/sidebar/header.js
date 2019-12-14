@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom';
 import avatar from './../../image/avatar.png';
 import logo from './../../image/loginImg.png';
 
@@ -16,7 +17,7 @@ export default class Header extends Component {
                 </div>
                 <hr/>
                 <div className="sideBarMenu">
-                    <div className="sideElement">Modules</div>
+                    <Link className="sideElement" to='/classroom'>Modules</Link>
                     <div className="sideElement">Classes</div>
                     <div className="sideElement">Students</div>
                 </div>

@@ -9,7 +9,6 @@ export default class MainPage extends Component {
         super(props);
         this.state = {
             sidebarIsOpen: false,
-            classrooms: [{class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}, {class: '1', number: 12}]
         };
         this.handleSidebar = this.handleSidebar.bind(this);
     }
@@ -20,9 +19,6 @@ export default class MainPage extends Component {
         });
     }
 
-    classroomList() {
-        return this.state.classrooms.map(classroom => <Class name={ classroom.class } number={ classroom.number } />)
-    }
     render() {
         return (
             <div className='dashboard'>
@@ -33,7 +29,7 @@ export default class MainPage extends Component {
                     isopen={ this.handleSidebar }
                     text={ 'open_the_menu' }
                 />
-                <ListArea classname={ 'classList' }  renderList={ this.classroomList() }/>
+                
             </div>
         )
     }

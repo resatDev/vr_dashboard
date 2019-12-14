@@ -183,6 +183,8 @@
 }
 
 .sidebar .sideBarMenu{
+    display: flex;
+    align-items: center;
     width: 100%;
     height: auto;
 }
@@ -192,6 +194,8 @@
     line-height: 50px;
     text-align: center;
     transition: 0.2s all;
+    text-decoration: none;
+    color: black;
 }
 
 .sidebar .sideBarMenu .sideElement:hover{
