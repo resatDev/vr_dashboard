@@ -17,9 +17,9 @@ export default class Header extends Component {
                 </div>
                 <hr/>
                 <div className="sideBarMenu">
-                    <Link className="sideElement" to='/classroom'>Modules</Link>
-                    <div className="sideElement">Classes</div>
-                    <div className="sideElement">Students</div>
+                    <Link className="sideElement" to="/classroom">Modules</Link>
+                    <Link className="sideElement" to="/classroom">Classes</Link>
+                    <Link className="sideElement" to="/classroom">Students</Link>
                 </div>
                 <div className="logo">
                     <img src={ logo } alt="Logo"/>
