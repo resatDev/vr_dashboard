@@ -183,10 +183,9 @@
 }
 
 .sidebar .sideBarMenu{
-    display: flex;
-    align-items: center;
     width: 100%;
     height: auto;
+    text-align: center;
 }
 
 .sidebar .sideBarMenu .sideElement{
@@ -306,7 +305,7 @@
     display: block;
     position: relative;
     width: 95%;
-    height: 400px;
+    height: 930px;
     margin-top: 20px;
     margin-left: 2.5%;
     border-radius: 5px;
