@@ -3,16 +3,9 @@ import avatar from './../../image/avatar.png';
 import logo from './../../image/loginImg.png';
 
 export default class Header extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            sidebarIsOpen: false
-        }
-    }
-    
     sidebar = (
         <div>
-            <div className="sidebarDeep" onClick={ () => {this.setState({ sidebarIsOpen: false })}}></div>
+            <div className="sidebarDeep" onClick={ () => this.props.isopen(false)}></div>
             <div className="sidebar">
                 <div className="profile">
                     <div className="profileImage">
@@ -40,8 +33,7 @@ export default class Header extends Component {
     render() {
         return (
             <Fragment>
-                { (this.state.sidebarIsOpen) ? (this.sidebar) : null }
-                <button className="btn red" onClick={ () => {this.setState({ sidebarIsOpen: true })}}>Aç</button>
+                { this.props.open ? (this.sidebar) : null }
             </Fragment>
         )
     }
