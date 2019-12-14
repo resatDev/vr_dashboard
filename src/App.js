@@ -1,14 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Authentication from './authentication';
-import Header from './components/sidebar/header';
+// import Header from './components/sidebar/header';
 import MainPage from './main-page';
-import Class from './class';
+// import Class from './class';
 
 function App() {
   return (
-    <Fragment>
-      <Authentication />
-    </Fragment>
+    <Router>
+      <Route exact path='/'>
+        <Authentication />
+      </Route>
+      <Route path='/main-page'>
+        <MainPage />
+      </Route>
+    </Router>
   );
 }
 

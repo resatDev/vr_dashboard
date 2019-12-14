@@ -3,7 +3,7 @@ import Login from './components/authentication/login';
 import Register from './components/authentication/register';
 import Back from './image/back.gif';
 import Buttons from './components/authentication/buttons';
-import { login } from './api/api';
+import MainPage from './main-page';
 
 export default class Authentication extends Component {
     constructor(props){
@@ -18,17 +18,13 @@ export default class Authentication extends Component {
                 passwordAgain: null
             },
             login: {
-                login: null,
+                email: null,
                 password: null
             },
             passwordChecking: null,
-            authentication: false
-        }
-    }
-
-    fillform = (e) => {
-        document.getElementById('email').value = 'resat@resat.com';
-        document.getElementById('password').value = 'resat';
+            authenticationSuccess: false
+        };
+        this.loginProcess = this.loginProcess.bind(this);
     }
 
     openRegistrationPanel = () => {
@@ -54,13 +50,13 @@ export default class Authentication extends Component {
     }
 
     handleChangeLogin = (e) => {
-        e.preventDefault();
         this.setState({
             login: {
                 ...this.state.login,
                 [e.target.name]: e.target.value
             }
         })
+        console.log(this.state.login);
     }
 
     checkThePassword = () => {
@@ -75,9 +71,9 @@ export default class Authentication extends Component {
         (this.state.passwordChecking) ? this.makingToast() : alert('osman osman osman osman');
     }
 
-    loginProcess = async() => {
-        let response = await login(this.state.login.email, this.state.login.password)
-        
+    // TODO: add api call
+    loginProcess() {
+        !localStorage.getItem('loginCredential') ? localStorage.setItem('loginCredential', {userid: 1}) : console.log('içerdesin bebek');
     }
 
     makingToast = () => {
@@ -85,13 +81,10 @@ export default class Authentication extends Component {
     }
 
     render() {
-        if(this.state.authentication){
-            <Redirect to='/' />
-        }
         return (
             <Fragment>
-                <button id="fillForm" className="btn red" onClick={ this.fillform }>Fill Form</button>
-                <div className="mainPage">
+            {
+                (!localStorage.getItem('loginCredential')) ? <div className="mainPage">
                     <div className="leftSide">
                         <img src={Back} alt="background_photo"/>
                     </div>
@@ -99,7 +92,8 @@ export default class Authentication extends Component {
                         <Buttons registration={ this.openRegistrationPanel } login={ this.openLoginPanel }/>
                         {(this.state.checkPanel) ? <Login handleChange={ this.handleChangeLogin } login={ this.loginProcess } /> : <Register handleChange={ this.handleChangeRegistration } passwordCheck={ this.checkThePassword } />}
                     </div>
-                </div>
+                </div> : <MainPage />
+            }
             </Fragment>
         )
     }
