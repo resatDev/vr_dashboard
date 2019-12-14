@@ -29,13 +29,15 @@ export default class ClassroomContainer extends Component {
         return (
             <Fragment>
                 <Header isopen={ this.handleSidebar } open={this.state.sidebarIsOpen} />  
-                <ListArea classname={ 'classList' }  renderList={ this.classroomList() }/>                
-                <Button 
-                    class={ 'openMenu' }
-                    icon={ MenuIcon }
-                    isopen={ this.handleSidebar }
-                    text={ 'open_the_menu' }
-                />
+                <div className="classMain">
+                    <ListArea classname={ 'classList' }  renderList={ this.classroomList() }/>                
+                    <Button 
+                        class={ 'openMenu' }
+                        icon={ MenuIcon }
+                        isopen={ this.handleSidebar }
+                        text={ 'open_the_menu' }
+                    />
+                </div>
             </Fragment>
         )
     }

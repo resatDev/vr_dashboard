@@ -361,5 +361,8 @@ hr{
     color: #ededed;
 }
 
-
+.classMain{
+    display: block;
+    position: absolute;
+}
 
