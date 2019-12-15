@@ -392,8 +392,10 @@ hr{
 }
 
 .container-table100 {
- display: flex;
+ display: block;
  position: fixed;
+ height: 60%;
+ overflow-y: scroll;
  z-index:1;
  left: 20%;
  top: 10%;
