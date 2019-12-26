@@ -4,6 +4,7 @@ import Authentication from './authentication';
 // import Header from './components/sidebar/header';
 import MainPage from './main-page';
 import ClassroomContainer from './classroomContainer';
+// import Modules from './moduleContainer';
 // import Class from './class';
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
       <Route path='/classroom'>
         <ClassroomContainer />
       </Route>
+      {/* <Router path='/module'>
+        <Modules />
+      </Router> */}
     </Router>
   );
 }
