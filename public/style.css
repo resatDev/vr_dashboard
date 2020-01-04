@@ -566,3 +566,27 @@ hr{
   cursor: pointer;
   opacity: 0.9;
 }
+
+.outer-card{
+  width: 500px;
+  height: 500px;
+  float:left;
+  display: flex;
+}
+
+.outer-card:hover{
+  cursor: pointer;
+}
+
+.card-title{
+  color: black !important;
+  font-weight: bolder;
+}
+
+.module{
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 0;  
+}

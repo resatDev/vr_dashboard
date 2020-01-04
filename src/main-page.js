@@ -30,7 +30,6 @@ export default class MainPage extends Component {
                     text={ 'open_the_menu' }
                 />
                 <MyChart />
-
                 <MyChart />
                 <MyChart />
                 <MyChart />
