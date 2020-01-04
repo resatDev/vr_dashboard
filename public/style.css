@@ -590,3 +590,14 @@ hr{
   min-height: 100vh;
   z-index: 0;  
 }
+
+.card-image{
+  width: 150px;
+  height: 150px;
+}
+
+.closeItem{
+  width: 70px;
+  height: 70px;
+  float: right;
+}
